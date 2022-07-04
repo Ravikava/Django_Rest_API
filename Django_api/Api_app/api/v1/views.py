@@ -16,7 +16,6 @@ class EmployeeApi(APIView):
         
         emp = Employee.objects.all()
         serializer = EmployeeSerializer(emp,many=True)
-        print(serializer)
         return Response(serializer.data)
 
     def post(self,request,format=None):
